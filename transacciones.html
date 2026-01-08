@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wango</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <header class="header-principal">
+        <button class="boton-menu">
+            <img src="./logos and imgs/menu.png" alt="menú-hamburguesa">
+        </button>
+        <div class="logo-contenedor">
+                <img src="./logos and imgs/ewallet.png" alt="logo-wallet-wango">
+            <h1>Wango</h1>
+        </div>
+        <div class="usuario-contenedor">
+            <img src="./logos and imgs/usuario.png">
+        </div>
+    </header>
+
+
+    <nav class="navegacion-principal">
+        <ul>
+            <li><a href="./index.html">Página principal</a></li>
+            <li><a href="./métodos-de-pago.html">Métodos de pago</a></li>
+            <li class="active"><a href="./transacciones.html">Transacciones</a></li>
+            <li><a href="./configuración.html">Configuración</a></li>
+        </ul>
+    </nav>
+
+
+    <main class="contenido-transacciones">
+        <h2>Transacciones</h2>
+        <p>Consulta pagos, compras y otras transacciones con Wango.</p>
+
+
+        <div class="contenedor-vacio-transacciones">
+            <img src="https://www.gstatic.com/gpay/web/transactions_empty_2.svg">
+            <p>No hay transacciones que mostrar</p>
+            <p>Cuando las transacciones estén disponibles, podrás verlas aquí</p>
+        </div>
+
+
+        <aside class="nota-informativa">
+            <img src="./logos and imgs/lampara.png">
+            <p>Todas las transacciones son visibles junto a la tarjeta que fue utilizada para realizar el cobro. Verás el cargo en la tarjeta utilizada bajo el concepto de Wango.Company.</p>
+        </aside>
+    </main>
+
+
+    <footer class="pie-pagina">
+        <ul>
+            <li><a href="#">Términos</a></li>
+            <li><a href="#">Términos de Wango</a></li>
+            <li><a href="#">Privacidad</a></li>
+            <li><a href="#">Privacidad de pagos</a></li>
+        </ul>
+    </footer>
+    
+<div class="modal-overlay" id="modalInfoUsuario">
+    <div class="modal-contenido modal-usuario">
+        <button class="cerrar-modal" id="cerrarModalUsuario">✕</button>
+        <div class="usuario-avatar">
+            <img src="./logos and imgs/usuario.png" alt="usuario">
+        </div>
+        <h3 id="nombreUsuario">Luis Pinedo Cabanillas</h3>
+        <div class="info-usuario">
+            <div class="campo-info">
+                <span class="etiqueta">Dirección:</span>
+                <span class="valor" id="direccionUsuario">Av. Los Fresnos 456, Mesa, Arizona</span>
+            </div>
+            <div class="campo-info">
+                <span class="etiqueta">Fecha de creación:</span>
+                <span class="valor" id="fechaCreacion">15 de Marzo, 2024</span>
+            </div>
+            <div class="campo-info">
+                <span class="etiqueta">ID de Wango:</span>
+                <span class="valor id-wango" id="idWango">WGO-7834-MXKL-9261</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="./app.js"></script>
+</body>
+</html>

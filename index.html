@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wango</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+
+        <div class="pantalla-carga" id="pantallaCarga">
+        <div class="contenedor-logo">
+            <img src="./logos and imgs/ewallet.png" alt="logo-wango">
+            <h1>Wango</h1>
+        </div>
+    </div>
+
+    <header class="header-principal">
+        <button class="boton-menu">
+            <img src="./logos and imgs/menu.png" alt="menú-hamburguesa">
+        </button>
+        <div class="logo-contenedor">
+                <img src="./logos and imgs/ewallet.png" alt="logo-wallet-wango">
+            <h1>Wango</h1>
+        </div>
+        <div class="usuario-contenedor">
+            <img src="./logos and imgs/usuario.png">
+        </div>
+    </header>
+
+    <nav class="navegacion-principal">
+        <ul>
+            <li class="active"><a href="./index.html">Página principal</a></li>
+            <li><a href="./métodos-de-pago.html">Métodos de pago</a></li>
+            <li><a href="./transacciones.html">Transacciones</a></li>
+            <li><a href="./configuración.html">Configuración</a></li>
+        </ul>
+    </nav>
+
+    <main class="contenido-principal">
+        <div class="contenido-izquierdo">
+            <section class="seccion-saldo">
+                <p class="saldo-label">Saldo disponible</p>
+                <div class="saldo-monto-contenedor">
+                    <h2 class="saldo-monto">S/. 1,250.00</h2>
+                    <button class="boton-ocultar-saldo">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                            <circle cx="12" cy="12" r="3"></circle>
+                        </svg>
+                    </button>
+                </div>
+                <div class="saldo-acciones">
+                    <button class="boton-copiar-link">Copiar link de pago</button>
+                    <button class="boton-generar-link">Generar otro link de pago</button>
+                </div>
+            </section>
+
+            <section class="seccion-metodos-pago">
+                <h2>Métodos de pago</h2>
+                <p>Añade, consulta y gestiona los métodos de pago que se pueden usar con Wango</p>
+                <div class="contenedor-tarjetas" id="contenedorTarjetas"></div>
+                <button class="boton-anadir-metodo">Añadir método de pago</button>
+            </section>
+
+            <section class="seccion-transacciones">
+                <h2>Transacciones recientes</h2>
+                <p>No hay transacciones que mostrar. Cuando empieces a hacer transacciones compartidas con Wango, las encontrarás aquí.</p>
+                <a href="#">Más información sobre las transacciones</a>
+                <img src="./logos and imgs/hora.png">
+            </section>
+
+            <section class="seccion-preguntas">
+                <h2>¿Tienes alguna pregunta?</h2>
+                <details class="pregunta-item">
+                    <summary>¿Qué es Wango y cuál es su principal función?</summary>
+                    <p>Es una aplicación que genera links de pago temporales y seguros que desaparecen después de cada compra.</p>
+                </details>
+                <details class="pregunta-item">
+                    <summary>¿Qué problema busca resolver Wango?</summary>
+                    <p>Evita tener que ingresar repetidamente los datos de tarjetas en diferentes sitios, reduciendo riesgos de seguridad y ahorrando tiempo.</p>
+                </details>
+                <details class="pregunta-item">
+                    <summary>¿Qué tipos de tarjetas puedo agregar en Wango?</summary>
+                    <p>Acepta todo tipo de tarjetas físicas de cualquier red de pago (Visa, Mastercard, American Express, Diners Club, etc.), excepto tarjetas virtuales.</p>
+                </details>
+                <details class="pregunta-item">
+                    <summary>¿En donde puedo utlizar Wango?</summary>
+                    <p>Puedes usarla en cualquier aplicación, ecommerce o tienda virtual que acepte las mismas redes de pago de tu tarjeta (Visa, Mastercard, etc.)</p>
+                </details>
+                <details class="pregunta-item">
+                    <summary>¿Qué funcionalidades principales ofrece Wango al usuario?</summary>
+                    <p>Permite agregar tarjetas, métodos de pago, revisar información y generar links de pago ilimitadamente.</p>
+                </details>
+                <details class="pregunta-item">
+                    <summary>¿Tienes más preguntas?</summary>
+                    <p>Para los métodos de pago y las transacciones, ve al Centro de Ayuda de Wango. Para las tarjetas de regalo, ve al Centro de Ayuda de Wango.</p>
+                </details>
+            </section>
+        </div>
+
+        <aside class="barra-lateral">
+            <section class="tarjeta-ayuda">
+                <div class="fondo-1">
+                    <img src="https://www.gstatic.com/gpay/web/upsell_rtp.svg">
+                </div>
+                <h3>Paga más rápido con Wango</h3>
+                <p>No tienes que seguir escribiendo tus datos para pagos. Cuando hayas guardado tus tarjetas, solo genera un link de pago y ¡Listo!</p>
+                <a href="#">Ver cómo funciona</a>
+            </section>
+        </aside>
+    </main>
+
+    <footer class="pie-pagina">
+        <ul>
+            <li><a href="#">Términos</a></li>
+            <li><a href="#">Términos de Wango</a></li>
+            <li><a href="#">Privacidad</a></li>
+            <li><a href="#">Privacidad de pagos</a></li>
+        </ul>
+    </footer>
+
+<div class="modal-overlay" id="modalAgregarTarjeta">
+    <div class="modal-contenido">
+        <button class="modal-cerrar" id="cerrarModal">&times;</button>
+        <h2>Añadir método de pago</h2>
+        <form id="formTarjeta">
+            <div class="form-grupo">
+                <label for="numeroTarjeta">Número de tarjeta *</label>
+                <input type="text" id="numeroTarjeta" maxlength="16" placeholder="xxxxxxxxxxxxxxxxx" required>
+            </div>
+            <div class="form-grupo">
+                <label for="fechaVencimiento">Fecha de vencimiento *</label>
+                <input type="text" id="fechaVencimiento" placeholder="MM/AA" maxlength="5" required>
+            </div>
+            <div class="form-grupo">
+                <label for="codigoSeguridad">Código de seguridad *</label>
+                <input type="text" id="codigoSeguridad" maxlength="3" placeholder="123" required>
+            </div>
+            <button type="submit" class="boton-guardar">Guardar tarjeta</button>
+        </form>
+    </div>
+</div>
+
+<div class="modal-overlay" id="modalEliminar">
+    <div class="modal-contenido-pequeño">
+        <h3>¿Estás seguro?</h3>
+        <p>¿Quieres eliminar esta tarjeta? Esta acción no se puede deshacer.</p>
+        <div class="botones-confirmacion">
+            <button class="boton-cancelar" id="btnCancelar">Cancelar</button>
+            <button class="boton-confirmar" id="btnConfirmar">Eliminar</button>
+        </div>
+    </div>
+</div>
+
+<div class="modal-overlay" id="modalInfoUsuario">
+    <div class="modal-contenido modal-usuario">
+        <button class="cerrar-modal" id="cerrarModalUsuario">✕</button>
+        <div class="usuario-avatar">
+            <img src="./logos and imgs/usuario.png" alt="usuario">
+        </div>
+        <h3 id="nombreUsuario">Luis Pinedo Cabanillas</h3>
+        <div class="info-usuario">
+            <div class="campo-info">
+                <span class="etiqueta">Dirección:</span>
+                <span class="valor" id="direccionUsuario">Av. Los Fresnos 456, Mesa, Arizona</span>
+            </div>
+            <div class="campo-info">
+                <span class="etiqueta">Fecha de creación:</span>
+                <span class="valor" id="fechaCreacion">15 de Marzo, 2024</span>
+            </div>
+            <div class="campo-info">
+                <span class="etiqueta">ID de Wango:</span>
+                <span class="valor id-wango" id="idWango">WGO-7834-MXKL-9261</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="./app.js"></script>
+
+  </body>
+</html>
+
