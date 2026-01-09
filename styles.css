@@ -863,7 +863,6 @@ input:checked + .slider-toggle:before {
     color: #666;
 }
 
-/* Pantalla de carga */
 .pantalla-carga {
     position: fixed;
     top: 0;
@@ -911,7 +910,6 @@ input:checked + .slider-toggle:before {
     pointer-events: none;
 }
 
-/* Notificacion toast */
 .notificacion-toast {
     position: fixed;
     top: 20px;
@@ -933,7 +931,7 @@ input:checked + .slider-toggle:before {
     transform: translateX(0);
 }
 
-/* Confeti */
+
 .confeti {
     position: fixed;
     width: 10px;
@@ -1537,7 +1535,7 @@ input:checked + .slider-toggle:before {
     }
 }
 
-/* Móviles */
+
 @media (max-width: 768px) {
     .boton-menu {
         display: block;
@@ -1664,7 +1662,7 @@ input:checked + .slider-toggle:before {
     }
 }
 
-/* Móviles pequeños */
+
 @media (max-width: 480px) {
     .header-principal {
         padding: 0.75rem;
@@ -1738,7 +1736,7 @@ input:checked + .slider-toggle:before {
     }
 }
 
-/* Landscape en móviles */
+
 @media (max-width: 768px) and (orientation: landscape) {
     .seccion-saldo {
         padding: 1.5rem 1rem;
@@ -1760,8 +1758,8 @@ input:checked + .slider-toggle:before {
     }
 }
 
-/* Desktop centrado del header */
-@media (min-width: 769px) {
+
+@media (min-width: 769px) {.logo-contenedor .logo-link
     .header-principal {
         justify-content: center;
         position: relative;
@@ -1776,4 +1774,12 @@ input:checked + .slider-toggle:before {
         position: absolute;
         left: 2rem;
     }
+}
+
+.logo-contenedor .logo-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: inherit;
 }
