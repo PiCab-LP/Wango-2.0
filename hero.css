@@ -102,7 +102,7 @@
   }
 }
 
-/* Celulares grandes (≤ 768px) */
+/* Celulares grandes */
 @media (max-width: 768px) {
   .hero{
     padding: 3.5rem 1.25rem;
@@ -129,7 +129,7 @@
   }
 }
 
-/* Celulares pequeños (≤ 480px) */
+/* Celulares pequeños */
 @media (max-width: 480px) {
   .hero{
     padding: 3rem 1rem;
